@@ -21,22 +21,25 @@
       $PARKING_LOT[$level][$id]["reserved"] == 1 ||
       ($size_of_car == "regular" && $PARKING_LOT[$level][$id]["size"] == "small")
     ) {
-      return "parking is not allowed";
+      return "parking is not allowed\n";
     } else {
       $PARKING_LOT[$level][$id]["reserved"] = 1;
-      return "parking is allowed";
+      return "parking is allowed\n";
     }
   }
 
   function parking_structure_info() {
     global $PARKING_LOT;
-    print_r($PARKING_LOT);
+    return $PARKING_LOT;
   }
 
-  // can_park(8, "small"); // allowed
-  // can_park(18, "regular"); // not allowed
-  // can_park(22, "small"); // allowed
-  // can_park(22, "small"); // not allowed
-  // can_park(4, "regular"); // allowed
+  print_r(can_park(2, 8, "small")); // allowed
+  print_r(can_park(2, 7, "regular")); // not allowed
+  print_r(can_park(1, 18, "regular")); // allowed
+  print_r(can_park(4, 0, "small")); // allowed
+  print_r(can_park(4, 0, "small")); // not allowed
+  print_r(can_park(3, 4, "regular")); // not allowed
+  print_r(can_park(3, 18, "regular")); // allowed
+  print_r(parking_structure_info());
 
 ?>
