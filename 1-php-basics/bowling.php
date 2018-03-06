@@ -1,6 +1,4 @@
 <?php
-  print_r(bowl($argv[1]));
-
   function bowl($number_of_bowls = 1) {
     $number_of_pins = array();
     for ($i = 1; $i <= $number_of_bowls; $i++) {
@@ -26,4 +24,7 @@
     );
     return $game_summary;
   }
+
+  print_r(bowl());
+  print_r(bowl(10));
 ?>
