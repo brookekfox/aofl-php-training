@@ -41,7 +41,7 @@
       $col = array_column($grid, $i);
       array_push($columns, $col);
     }
-    $rows_and_columns = array_merge($grid, $columns);    
+    $rows_and_columns = array_merge($grid, $columns);
     if (check_diagonals($grid) || check_rows_and_columns($rows_and_columns)) {
       return "win\n";
     } else {

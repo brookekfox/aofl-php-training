@@ -11,11 +11,11 @@
   function bad_words_filter($string, $bad_words) {
     foreach ($bad_words as $w) {
       if (strpos($string, $w) !== false) {
-        echo "true\n";
+        echo "bad word found: " . $w . "\n";
         return true;
       }
     }
-    echo "false\n";
+    echo "no bad words\n";
     return false;
   }
 
