@@ -68,12 +68,7 @@
     return check_game($player_1, $player_2);
   }
 
-  $player_1 = array(
-    "cards" => array(),
-    "total" => 0
-  );
-
-  $player_2 = array(
+  $player_1 = $player_2 = array(
     "cards" => array(),
     "total" => 0
   );
