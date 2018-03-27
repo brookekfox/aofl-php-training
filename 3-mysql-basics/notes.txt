@@ -4,14 +4,13 @@ CLASS 3 - MYSQL BASICS
 - avoid duplication
 
 RELATIONAL DATABASE
-- 
 - table relations and referential integrity are maintained by
   - primary keys - unique value stored in a table with its data i.e. user_id on user table
   - foreign keys - unique value stored in a table separate from its data i.e. path_id on user table
 - properly defined relation databases are "normalized"
   - First Normal Form (1NF) - splitting up multiple values in a column into multiple rows
     user | hobbies
-    --------------
+    ---------------
     John | biking
     John | swimming
   - Second Normal Form (2NF) - 1NF + no columns that relate to other columns
