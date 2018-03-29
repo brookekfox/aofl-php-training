@@ -1,4 +1,8 @@
 <?php
+
+const HIT_LIMIT = 16;
+const UPPER_LIMIT = 21;
+
 class Deck
 {
   public $cards = array();
@@ -67,15 +71,21 @@ class Player
     $current_score = array_sum($values);
     $index_of_ace = array_search("A", array_column($this->hand, "type"));
     if ($index_of_ace) {
-      if ($current_score + 10 > 16 && $current_score + 10 <= 21) {
+      if (
+        $current_score + 10 > HIT_LIMIT &&
+        $current_score + 10 <= UPPER_LIMIT
+      ) {
         $this->hand[$index_of_ace]["value"] = 11;
         $current_score += 10;
-      } elseif ($current_score - 10 > 16 && $current_score - 10 <= 21) {
+      } elseif (
+        $current_score - 10 > HIT_LIMIT &&
+        $current_score - 10 <= UPPER_LIMIT
+      ) {
         $this->hand[$index_of_ace]["value"] = 1;
         $current_score -= 10;
       }
     }
-    if ($current_score > 21) {
+    if ($current_score > UPPER_LIMIT) {
       $this->bust = true;
     }
     $this->score = $current_score;
@@ -126,8 +136,7 @@ class Blackjack
 
   private function takeATurn($player)
   {
-    $upper_hit_limit = 16;
-    while ($player->score <= $upper_hit_limit) {
+    while ($player->score <= HIT_LIMIT) {
       $player->hit($this->deck[$this->card_number]);
       $this->card_number++;
     }
@@ -136,7 +145,7 @@ class Blackjack
 
   private function cmp($a, $b)
   {
-    return $b->score > $a->score;
+    return $a->score < $b->score;
   }
 
   private function filterOutBusts($a)
