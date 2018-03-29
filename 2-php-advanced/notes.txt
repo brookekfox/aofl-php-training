@@ -1,9 +1,6 @@
 CLASS 2 - PHP ADVANCED
 https://gitlab.aofl.com/kristopher.thomson/qdev-utils
 
-- when you get an ace, check if an 11 wins or busts, should be a 1 and hit? should stay with a 1?
-- classes for player, blackjack, card?
-
 
 __toString() {
   // returns a string
