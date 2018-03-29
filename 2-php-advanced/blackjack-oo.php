@@ -172,10 +172,10 @@ class Blackjack
 // -------------------------------- tests --------------------------------------
 $deck = new Deck();
 $players = array(
-  new Player("Brooke")
-  // new Player("Mike"),
-  // new Player("Tina"),
-  // new Player("Lizzie")
+  new Player("Brooke"),
+  new Player("Mike"),
+  new Player("Tina"),
+  new Player("Lizzie")
 );
 echo new Blackjack($players, $deck->cards);
 // -------------------------------- tests --------------------------------------
