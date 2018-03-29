@@ -1,16 +1,9 @@
 CLASS 2 - PHP ADVANCED
 https://gitlab.aofl.com/kristopher.thomson/qdev-utils
 
-- refactor to not have multiple returns
-
-- rewrite adding fractions as a class
-- needs better output
-
-- keep track of cards as objects (value, suit, type)
-- keep players as an array - iterate over array of players with while loop
-- scores as an array, take highest
 - when you get an ace, check if an 11 wins or busts, should be a 1 and hit? should stay with a 1?
 - classes for player, blackjack, card?
+
 
 __toString() {
   // returns a string

@@ -18,7 +18,7 @@ RELATIONAL DATABASE
     --------------------------------------
     John | Yosemite | 1/1/18       | CA
     (here, state should be associated to the park via a key (park_id), not to the John row; park should be its own table)
-  - Third Normal Form (3NF) - 2NF + 
+  - Third Normal Form (3NF)
     name | park     | date visited | vehicle | mileage
     --------------------------------------------------
     John | Yosemite | 1/1/18       | minivan | 25 mpg
