@@ -5,6 +5,7 @@
     - but it's limiting as it requires the same arguments
     - so instead so can instantiate the core class in the presentation layer class and call its init function with the correct arguments
 - [WebServices Conventions](https://confluence.abcmouse.com/pages/viewpage.action?pageId=4489839)
+- [WebServices Documentation Standards](https://confluence.abcmouse.com/pages/viewpage.action?pageId=54243841)
   ```javascript
   //Including a CoreServiceLayer class from a CoreServiceLayer class.
   //Same for AbcMouseMarketingServiceLayer
